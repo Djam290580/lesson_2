@@ -2,13 +2,14 @@
 # Строки необходимо пронумеровать. Если в слово длинное, выводить только первые 10 букв в слове.
 
 words_list = input('Enter word: ')
+results = words_list.split()
+print(results)
+print()
+for i, result in enumerate(results[:10], 1):
+    print(i, result[:10])
 
-result = words_list.split()
-print(result)
+print()
+print()
 
-for i in enumerate(result, 1):
-    print(i)
-
-
-for i in range(1, len(result)+1):
-    print(i, ')', result[i-1])
+for i in range(1, len(results)+1):
+    print(i, ')', results[i-1])
